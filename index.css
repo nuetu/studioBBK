@@ -37,7 +37,6 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  width: 50rem;
 }
 #nav > a:nth-child(1),
 #nav > a:nth-child(2) {
@@ -85,6 +84,7 @@
   }
   #nav {
     flex-direction: row;
+    width: 50rem;
   }
   #nav > a:nth-child(1),
   #nav > a:nth-child(2) {
