@@ -16,7 +16,7 @@
   font-weight: 1000;
 }
 #header > hr:nth-child(2) {
-  width: 50rem;
+  width: 30rem;
 }
 #header > span:nth-child(3) {
   margin-top: 2rem;
@@ -91,5 +91,8 @@
     border: 0.2rem solid var(--white);
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+  #header > hr:nth-child(2) {
+    width: 50rem;
   }
 }
