@@ -9,6 +9,13 @@ html,
 body {
   background-color: var(--black);
 }
+html {
+  height: -webkit-fill-available;
+}
+body {
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+}
 #root {
   font-family: "Montserrat", sans-serif;
   padding: 1rem;
