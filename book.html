@@ -8,7 +8,6 @@
     <title>Studio BBK</title>
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="book.css" />
-    <link rel="stylesheet" href="class.css" />
     <link rel="canonical" href="http://studiobbk.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -18,6 +17,50 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="navBar">
+        <a href="/"><div>Home</div></a>
+        <a href="/about"><div>About</div></a>
+        <a href="/book" class="active"><div>Book</div></a>
+        <a href="/listen"><div>Listen</div></a>
+        <a href="/social"><div>Social</div></a>
+      </div>
+      <div id="form">
+        <form>
+          <div>
+            <label for="name">Your Name</label>
+            <input
+              class="wide"
+              type="text"
+              name="name"
+              placeholder="First and Last Name"
+            />
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input
+              class="wide"
+              type="email"
+              name="email"
+              placeholder="you@youremail.com"
+            />
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea
+              class="wide"
+              type="text"
+              name="message"
+              placeholder="Hey Studio BBK, I would love for you to mix my song!"
+            ></textarea>
+          </div>
+          <div>
+            <label for="submit">Your Submit Button</label>
+            <input type="submit" name="submit" />
+          </div>
+        </form>
+      </div>
+      <div id="foot"><span>Studio BBK | 2022</span></div>
+    </div>
   </body>
 </html>

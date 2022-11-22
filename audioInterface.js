@@ -8,7 +8,7 @@ var ai = document.getElementById("audioInterface");
 for (let i = 0; i < 4; i++) {
   ai.innerHTML += `
     <div class="aiSection" id="ai${i}">
-      <img class="aiKnob selector" id="kn${i}" src="dial.svg" alt="Audio Interface volume dial" onClick="rotateKnob(${i})" style="transform: rotate(-150deg);"/>
+      <img class="aiKnob selector" id="kn${i}" src="dial.svg" alt="Audio Interface volume dial" onmouseover="rotateKnob(${i})" style="transform: rotate(-150deg);"/>
       <div class="aiBar" id="br${i}"></div>
       <div>
          <button id="btn${i}" class="aiPhantom" onClick="clickPhantom(${i})"></button><span class="pha">48V</span>
@@ -21,8 +21,13 @@ function rotateKnob(i) {
   let centerX = knob.offsetLeft + knob.offsetWidth / 2;
   let centerY = knob.offsetTop + knob.offsetHeight / 2;
   const end = (5 / 6) * Math.PI;
-  knob.addEventListener("mousemove", (event) => {
-    rotate(event);
+  knob.addEventListener("mousedown", (event) => {
+    knob.onmousemove = function (e) {
+      rotate(e);
+    };
+  });
+  knob.addEventListener("mouseup", function (e) {
+    knob.onmousemove = null;
   });
   function rotate(e) {
     var theta = 0;

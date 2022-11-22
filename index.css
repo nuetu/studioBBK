@@ -49,17 +49,6 @@
 #nav > a:nth-child(2):hover {
   background-color: var(--gray);
 }
-#foot {
-  background-color: var(--black);
-  width: 100vw;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
 #main {
   display: flex;
   flex-direction: row;

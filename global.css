@@ -39,7 +39,8 @@ a {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-button {
+button,
+input[type="submit"] {
   color: inherit;
   border: none;
   padding: 0;
@@ -47,11 +48,63 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+#foot {
+  background: linear-gradient(90deg, var(--black) 75%, rgba(0, 0, 0, 0) 76%);
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+#navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#navBar > a {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+}
+#navBar > a.active {
+  border: 1px solid var(--white);
+}
 @media (min-width: 1024px) {
   body,
   html {
     margin: 0;
     height: 100vh;
     width: 100vw;
+    background-image: linear-gradient(
+      150deg,
+      rgba(213, 64, 232, 0.4) 0%,
+      var(--black) 10%,
+      var(--black) 90%,
+      rgba(64, 218, 232, 0.4) 100%
+    );
+  }
+  #navBar {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+  #navBar > a {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  #navBar > a:hover {
+    box-shadow: 0 0 1rem 0.25rem var(--blue);
+    border: 1px solid var(--white);
+  }
+  #navBar > a.active {
+    box-shadow: 0 0 1rem 0.25rem var(--blue);
+    border: 1px solid var(--white);
+  }
+  #navBar > a.active:hover {
+    box-shadow: 0 0 1rem 0.25rem var(--pink);
   }
 }
