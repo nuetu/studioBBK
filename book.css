@@ -1,5 +1,4 @@
 #form {
-  padding: 2rem;
   border-radius: 10px;
 }
 #form > form {
@@ -15,13 +14,13 @@ label,
 input {
   display: block;
   font: inherit;
+  text-align: center;
 }
 .wide {
-  border-radius: 5px;
   font-size: 2rem;
-  width: 30rem;
+  width: 100vw;
   height: 3rem;
-  max-width: 30rem;
+  border: none;
 }
 textarea.wide {
   font: inherit;
@@ -47,5 +46,17 @@ input[type="submit"]:hover {
 @media (min-width: 1024px) {
   #form {
     border: 1px solid var(--white);
+    padding: 2rem;
+  }
+  .wide {
+    border-radius: 5px;
+    width: 30rem;
+    height: 3rem;
+    max-width: 30rem;
+  }
+  label,
+  input {
+    text-align: start;
+    text-indent: 0.25em;
   }
 }
