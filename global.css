@@ -109,7 +109,10 @@ input[type="submit"] {
   }
 }
 @media (max-width: 1023px) {
-  html {
-    height: 100vh;
+  body {
+    overflow-x: hidden;
+  }
+  #foot {
+    background-color: var(--black);
   }
 }
