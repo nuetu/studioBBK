@@ -18,11 +18,19 @@
   width: 85vw;
 }
 #header > span:nth-child(3) {
-  font-size: 8vw;
+  font-size: 7vw;
   margin-top: 1rem;
   background: -webkit-linear-gradient(right, var(--blue), var(--pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+#and {
+  display: none;
+}
+#muMast,
+#auEng {
+  display: block;
 }
 #contact {
   display: flex;
@@ -111,5 +119,10 @@
   #header > hr:nth-child(2) {
     width: 50rem;
     margin-top: 2rem;
+  }
+  #and,
+  #muMast,
+  #auEng {
+    display: initial;
   }
 }
