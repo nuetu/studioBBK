@@ -9,13 +9,13 @@ for (let i = 0; i < 4; i++) {
   ai.innerHTML += `
     <div class="aiSection" id="ai${i}">
       <img class="aiKnob selector" id="kn${i}" src="dial.svg" alt="Audio Interface volume dial" onmouseover="rotateKnob(${i})" style="transform: rotate(-150deg);"/>
-      <div class="aiBar" id="br${i}"></div>
+      <div class="aiBar" id="br${i}"><span class="db">dB</span></div>
       <div>
          <button id="btn${i}" class="aiPhantom" onClick="clickPhantom(${i})"></button><span class="pha">48V</span>
       </div>
     </div>`;
 }
-ai.innerHTML += '<div id="master"></div>';
+ai.innerHTML += '<div id="master"><span id="masterText">main out</span></div>';
 var thetaTot = [];
 function rotateKnob(i) {
   const knob = document.getElementById("kn" + i);
@@ -99,5 +99,10 @@ function setMaster() {
       "%, rgba(0,0,0,0) " +
       thetaTotVal +
       "%)";
+  }
+  if (thetaTotVal < 7) {
+    master.style.color = "var(--white)";
+  } else {
+    master.style.color = "var(--black)";
   }
 }

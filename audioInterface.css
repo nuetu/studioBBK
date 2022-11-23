@@ -29,8 +29,20 @@
 }
 .aiBar {
   grid-row: span 2;
+}
+.aiBar,
+#master {
   border-radius: 5px;
   border: 1px solid var(--silver);
+  display: flex;
+}
+.db,
+#masterText {
+  display: block;
+  align-self: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
 }
 .aiPhantom {
   border-radius: 100%;
@@ -52,10 +64,6 @@
 }
 .phaRed {
   color: red;
-}
-#master {
-  border-radius: 5px;
-  border: 1px solid var(--silver);
 }
 @media (min-width: 1024px) {
   #audioInterface {
